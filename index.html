@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!--  JS  -->
+    <script src="./index.js"></script>
+
+    <!--  CSS   -->
+    <link rel="stylesheet" type="text/css" href="./style.css" />
+
+
+    <!--  IMPORTANT  -->
+    <!--  모든 p태그에 마진0 적용 css 참조  -->
+
+</head>
+<body>
+    <div class="entire-form list">
+        <h3 class="text-align-center list-array-center">するべきこと</h3>
+            <div class="todo-element list-array-center">
+                <div id="todoList">
+                </div>
+            </div>
+            <br>
+        <Button onclick="foldOpen('foldDiv1')" id="foldButton" class="fold-button">さらにカードを追加</Button>
+
+        <!--  위 버튼을 누르면 아래 div 가 표시  -->
+        <div class="text-filde-div" id="foldDiv1">
+            <input id="inputFilde" class="text-filde" type="text" placeholder="このカードにタイトルを追加">
+
+            <button onclick="addItem()">カードを追加</button>
+            <button>キャンセル</button>
+
+        </div>
+    </div>
+
+    <div class="entire-form list">
+        <h3 class="text-align-center list-array-center">作業中</h3>
+            <div class="todo-element list-array-center">
+                <div id="doingList">
+                </div>
+            </div>
+            <br>
+        <Button onclick="foldOpen('foldDiv2')" class="fold-button">さらにカードを追加</Button>
+
+        <!--  위 버튼을 누르면 아래 div 가 표시  -->
+        <div class="text-filde-div" id="foldDiv2">
+            <input id="inputFilde" class="text-filde"　type="text" placeholder="このカードにタイトルを追加">
+
+            <button onclick="addItem()">カードを追加</button>
+            <button>キャンセル</button>
+
+        </div>
+    </div>
+
+    <div class="entire-form list">
+        <h3 class="text-align-center list-array-center">完了</h3>
+            <div class="todo-element list-array-center">
+                <div id="doingList">
+                </div>
+            </div>
+            <br>
+        <Button onclick="foldOpen('foldDiv3')" class="fold-button">さらにカードを追加</Button>
+
+        <!--  위 버튼을 누르면 아래 div 가 표시  -->
+        <div class="text-filde-div" id="foldDiv3">
+            <input class="text-filde"　type="text" placeholder="このカードにタイトルを追加">
+
+            <button id="inputFilde" onclick="addItem()">カードを追加</button>
+            <button>キャンセル</button>
+
+        </div>
+    </div>
+
+    <div>
+
+    </div>
+</body>
+</html>
