@@ -30,7 +30,7 @@
         <div class="text-filde-div" id="foldDiv1">
             <input id="inputFilde" class="text-filde" type="text" placeholder="このカードにタイトルを追加">
 
-            <button onclick="addItem()">カードを追加</button>
+            <button onclick="addItem('todoList','doingList')">カードを追加</button>
             <button>キャンセル</button>
 
         </div>
@@ -49,7 +49,7 @@
         <div class="text-filde-div" id="foldDiv2">
             <input id="inputFilde" class="text-filde"　type="text" placeholder="このカードにタイトルを追加">
 
-            <button onclick="addItem()">カードを追加</button>
+            <button onclick="addItem('doingList','doneList')">カードを追加</button>
             <button>キャンセル</button>
 
         </div>
@@ -58,7 +58,7 @@
     <div class="entire-form list">
         <h3 class="text-align-center list-array-center">完了</h3>
             <div class="todo-element list-array-center">
-                <div id="doingList">
+                <div id="doneList">
                 </div>
             </div>
             <br>
@@ -68,7 +68,7 @@
         <div class="text-filde-div" id="foldDiv3">
             <input class="text-filde"　type="text" placeholder="このカードにタイトルを追加">
 
-            <button id="inputFilde" onclick="addItem()">カードを追加</button>
+            <button id="inputFilde" onclick="doneAddList()">カードを追加</button>
             <button>キャンセル</button>
 
         </div>

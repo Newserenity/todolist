@@ -11,8 +11,6 @@ if (!('remove' in Element.prototype)) {
 ///
 
 
-
-
 let opendFold = [];
 
 function foldOpen(id) {
@@ -27,26 +25,26 @@ function foldOpen(id) {
     }
 }
 
-function addItem(){
+function addItem(id1, id2){
     // 할일 가져오기
     let inputFildeValue = document.createTextNode(document.getElementById("inputFilde").value);
 
     // 할일 가져온거 체크
     if (!inputFildeValue) {
-        alert("Title is empty")
+        alert("Filde is empty")
         return;
     }
 
     // 리스트 가져오기
-    const listElement = document.getElementById("todoList");
-    const doingList = document.getElementById("doingList");
+    const list1 = document.getElementById(id1);
+    const list2 = document.getElementById(id2);
 
     // 할일 카드 생성
     const div = document.createElement("div");
     const head = document.createElement("p");
     const date = document.createElement("p");
-    const moveButton = document.createElement("button");
     const removeButton = document.createElement("button");
+    const moveButton = document.createElement("button");
 
     // 시간 라이브러리
     let today = new Date()
@@ -62,14 +60,14 @@ function addItem(){
     date.innerHTML = month + "/" + day;
 
     // 버튼 글자삽입
-    moveButton.innerHTML = "移動";
-    removeButton.innerHTML = "削除";
+    removeButton.innerHTML = "DL";
+    moveButton.innerHTML = "MO";
 
     // class 추가
     head.classList.add("event-content");
     date.classList.add("event-content");
-    moveButton.classList.add("del-button");
     removeButton.classList.add("del-button");
+    moveButton.classList.add("del-button");
 
     // 삭제 기능 삽입
     removeButton.addEventListener("click", function () {
@@ -78,18 +76,25 @@ function addItem(){
 
     // 이동기능 삽입
     moveButton.addEventListener("click", function(){
-        // div.remove();
-        doingList.appendChild(div);
+        moveButton.addEventListener("click", function () {
+            
+        });
+
+        list2.appendChild(div);
     });
 
     // 묶기
     div.appendChild(head);
     div.appendChild(date);
-    div.appendChild(moveButton);
     div.appendChild(removeButton);
+    div.appendChild(moveButton);
 
     // 리스트에 추가
-    listElement.appendChild(div);
+    list1.appendChild(div);
+}
+
+function doneAddList() {
+
 }
 
 // list
